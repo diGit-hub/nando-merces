@@ -1,10 +1,10 @@
 import { ArrowDown } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import heroImage1 from 'figma:asset/6b82895a9c742e27af5bcaea1fcd195c4ef9a400.png';
-import heroImage2 from 'figma:asset/2ca0f9be7b39738c75167c2dce95f9f6bdb70ce6.png';
-import heroImage3 from 'figma:asset/f3ac8b4d66358d1e87d2763a13e649afb8751d26.png';
-import heroImage4 from 'figma:asset/774565681b28d58f4acb05a856b31ba731d36c1a.png';
+import heroImage1 from '../assets/PSX_20240621_142022.jpg';
+import heroImage2 from '../assets/PSX_20240621_142022.jpg';
+import heroImage3 from '../assets/PSX_20240621_142022.jpg';
+import heroImage4 from '../assets/PSX_20240621_142022.jpg';
 
 const slides = [
   {

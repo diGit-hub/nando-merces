@@ -1,6 +1,6 @@
 import { ShoppingCart } from 'lucide-react';
 import { Button } from './ui/button';
-import logo from 'figma:asset/9e7eb3ba4c056e06ca439ae0070e2ab33280a4c8.png';
+import logo from '../assets/PSX_20240621_142022.jpg';
 
 interface HeaderProps {
   onCartClick: () => void;
