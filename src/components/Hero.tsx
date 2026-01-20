@@ -1,10 +1,10 @@
 import { ArrowDown } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import heroImage1 from '../assets/PSX_20240621_142022.jpg';
-import heroImage2 from '../assets/PSX_20240621_142022.jpg';
-import heroImage3 from '../assets/PSX_20240621_142022.jpg';
-import heroImage4 from '../assets/PSX_20240621_142022.jpg';
+import heroImage1 from '../assets/lilo.jpg';
+import heroImage2 from '../assets/casamento.jpg';
+import heroImage3 from '../assets/encomenda.jpg';
+import heroImage4 from '../assets/maria-e-jesus.png';
 
 const slides = [
   {
