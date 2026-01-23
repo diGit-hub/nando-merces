@@ -157,7 +157,7 @@ export function BudgetCalculator() {
 
     if (artType === 'digital-realista') {
       if (backgroundType === 'cenario') {
-        return backgroundType === 'complexo' ? 1200 : 1000;
+        return 1000;
       }
       const basePrice = backgroundType === 'complexo' ? 1200 : 1000;
       return basePrice + (peopleCount - 1) * 200;
@@ -165,7 +165,7 @@ export function BudgetCalculator() {
 
     if (artType === 'digital-cartoon') {
       if (backgroundType === 'cenario') {
-        return backgroundType === 'complexo' ? 800 : 600;
+        return 600;
       }
       const basePrice = backgroundType === 'complexo' ? 800 : 600;
       return basePrice + (peopleCount - 1) * 100;
@@ -670,20 +670,20 @@ export function BudgetCalculator() {
                   <div className="flex gap-3 flex-wrap">
                     <button
                       onClick={handleReset}
-                      className="flex-1 bg-gray-200 text-gray-900 py-3 px-6 rounded-lg hover:bg-gray-300 transition-colors min-w-[200px]"
+                      className="flex-1 bg-gray-200 text-gray-900 py-3 px-6 rounded-lg hover:bg-gray-300 transition-colors min-w-50px]"
                     >
                       Refazer Orçamento
                     </button>
                     <button
                       onClick={generatePDF}
-                      className="flex-1 bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 min-w-[200px]"
+                      className="flex-1 bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 min-w-50"
                     >
                       <FileText className="w-5 h-5" />
                       Gerar PDF
                     </button>
                     <button
                       onClick={sendToWhatsApp}
-                      className="flex-1 bg-green-600 text-white py-3 px-6 rounded-lg hover:bg-green-700 transition-colors min-w-[200px]"
+                      className="flex-1 bg-green-600 text-white py-3 px-6 rounded-lg hover:bg-green-700 transition-colors min-w-50"
                     >
                       Enviar WhatsApp
                     </button>
