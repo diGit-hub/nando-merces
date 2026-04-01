@@ -15,6 +15,7 @@
   }
   
   body {
+    overflow-x: clip;
     background-color: var(--color-premium-white);
     color: var(--color-charcoal);
     -webkit-font-smoothing: antialiased;
