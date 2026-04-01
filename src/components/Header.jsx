@@ -13,10 +13,10 @@ function Header({ onOpenModal }) {
                         Galeria
                     </a>
                     <button
-                        class="hover:text-primary transition-colors text-primary font-bold"
+                        class="hover:text-primary transition-colors uppercase text-primary font-bold"
                         onClick={onOpenModal}
                     >
-                        Encomendas
+                        Encomendar
                     </button>
                 </div>
                 <button class="md:hidden">
