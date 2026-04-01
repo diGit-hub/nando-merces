@@ -18,7 +18,7 @@ function App() {
             <Header />
             <main class="flex flex-col min-h-dvh">
                 <Hero onOpenModal={openModal} />
-                <About onOpenModal={openModal} />
+                <About />
                 <Gallery />
                 <CTA onOpenModal={openModal} />
             </main>

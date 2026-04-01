@@ -1,4 +1,4 @@
-export default function About({ onOpenModal }) {
+export default function About() {
     return (
         <section class="py-32 md:py-48 bg-charcoal text-premium-white overflow-hidden" id="about">
             <div class="max-w-[1440px] mx-auto px-6 md:px-12">
@@ -34,12 +34,6 @@ export default function About({ onOpenModal }) {
                             para evocar emoção e memória. Seu estúdio serve como um santuário onde o tempo
                             desacelera.
                         </p>
-                        <button
-                            class="inline-block border-b border-primary pb-1 text-primary text-sm font-medium hover:text-premium-white hover:border-premium-white transition-all uppercase tracking-widest"
-                            onClick={onOpenModal}
-                        >
-                            Solicitar Biografia Completa
-                        </button>
                     </div>
                 </div>
             </div>

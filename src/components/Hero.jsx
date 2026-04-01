@@ -31,9 +31,9 @@ export default function Hero({ onOpenModal }) {
                 <div class="lg:col-span-5 relative">
                     <div class="aspect-[3/4] overflow-hidden rounded-sm shadow-2xl">
                         <img
-                            alt="Nando Mercês"
+                            alt="Nando Mercês pintando"
                             class="w-full h-full object-cover"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp_pp_GIWzpfcdLAB7yIJiwG5NlDNmORXpzZjqcGL56_RjthdL6hIR_L6K0MQyEohnapI4XtZmKOZoWJB6M3-uMjUBK15mIaAAu7zVhpCEFmVNOdhxW0JKXGEXyLYpmwRn2i5muo5YHoVUUzqSVrqP6WKFH-8SwK1c9O_yq5BIekTkigmmi9rNmsKwsYcTGBlvgzyMxaGXWQB4awIv3QFsK41GM4Z91sLOitjTIMclsQgodbjGfLR70Sfz_cPU8Y_mhpCg_JFhKmQ"
+                            src="/src/assets/pintando.jpg"
                         />
                     </div>
                     <div class="absolute -bottom-6 -left-6 bg-premium-white p-8 hidden md:block border border-charcoal/5 shadow-xl">
