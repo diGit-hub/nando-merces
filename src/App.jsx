@@ -15,7 +15,7 @@ function App() {
 
     return (
         <>
-            <Header onOpenModal={openModal} />
+            <Header />
             <main class="flex flex-col min-h-dvh">
                 <Hero onOpenModal={openModal} />
                 <About onOpenModal={openModal} />

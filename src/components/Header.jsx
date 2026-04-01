@@ -1,4 +1,4 @@
-function Header({ onOpenModal }) {
+function Header() {
     return (
         <header class="fixed top-0 w-full z-40 bg-premium-white/80 backdrop-blur-xl border-b border-charcoal/5">
             <nav class="max-w-[1440px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
@@ -12,12 +12,12 @@ function Header({ onOpenModal }) {
                     <a class="hover:text-primary transition-colors" href="#gallery">
                         Galeria
                     </a>
-                    <button
+                    <a
                         class="hover:text-primary transition-colors uppercase text-primary font-bold"
-                        onClick={onOpenModal}
+                        href="#cta-section"
                     >
                         Encomendar
-                    </button>
+                    </a>
                 </div>
                 <button class="md:hidden">
                     <span class="material-symbols-outlined">menu</span>
