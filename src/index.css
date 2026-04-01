@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #b08d57;
+  --color-premium-white: #F5F5F7;
+  --color-charcoal: #1D1D1F;
+  
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-premium-white);
+    color: var(--color-charcoal);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  ::selection {
+    background-color: var(--color-primary);
+    color: white;
+  }
+}
+
+.signature-logo {
+  font-family: "Playfair Display", serif;
+  letter-spacing: -0.02em;
+}
+
+.form-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  color: rgb(29 29 31 / 0.5);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.form-input {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid rgb(29 29 31 / 0.1);
+  padding: 12px 0;
+  font-size: 1.125rem;
+  font-weight: 300;
+  appearance: none;
+  transition: border-color 0.3s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-bottom-color: var(--color-primary);
+}
+
+body.modal-open {
+  overflow: hidden;
+}

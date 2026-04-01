@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Nando Mercês | Fine Art Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#b08d57",
+                        "premium-white": "#F5F5F7",
+                        "charcoal": "#1D1D1F",
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-premium-white text-charcoal antialiased selection:bg-primary selection:text-white;
+            }
+        }
+        .signature-logo {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.02em;
+        }
+        input:focus, select:focus, textarea:focus {
+            @apply ring-0 border-primary outline-none !important;
+        }
+        .form-label {
+            @apply text-[10px] uppercase tracking-[0.2em] font-semibold text-charcoal/50 mb-2 block;
+        }
+        .form-input {
+            @apply w-full bg-transparent border-0 border-b border-charcoal/10 py-3 px-0 focus:border-primary transition-colors text-lg font-light appearance-none;
+        }
+        body.modal-open {
+            overflow: hidden;
+        }
+        #commission-modal {
+            display: none;
+        }
+        #commission-modal.active {
+            display: flex;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <header class="fixed top-0 w-full z-40 bg-premium-white/80 backdrop-blur-xl border-b border-charcoal/5">
+        <nav class="max-w-[1440px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
+            <a class="signature-logo text-2xl font-bold tracking-tighter" href="#">Nando Mercês</a>
+            <div class="hidden md:flex items-center gap-12 text-[13px] font-medium uppercase tracking-[0.15em]">
+                <a class="hover:text-primary transition-colors" href="#about">Sobre</a>
+                <a class="hover:text-primary transition-colors" href="#gallery">Galeria</a>
+                <button class="hover:text-primary transition-colors text-primary font-bold" onclick="openModal()">Encomendas</button>
+            </div>
+            <button class="md:hidden">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <section class="relative min-h-screen flex flex-col justify-center pt-20 overflow-hidden" id="hero">
+            <div class="max-w-[1440px] mx-auto px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 z-10 space-y-8">
+                    <div class="space-y-4">
+                        <span class="inline-block text-primary font-semibold tracking-[0.3em] uppercase text-xs">Realismo Contemporâneo</span>
+                        <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold leading-[0.9] font-serif tracking-tight">
+                            A Arte da <br/>
+                            <span class="italic font-normal">Quietude.</span>
+                        </h1>
+                    </div>
+                    <p class="max-w-md text-lg md:text-xl text-charcoal/70 font-light leading-relaxed">
+                        Capturando a intersecção silenciosa entre luz e legado através de técnicas clássicas de pintura a óleo.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-8 pt-4">
+                        <button class="bg-charcoal text-white px-10 py-5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-primary transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg" onclick="openModal()">
+                            Solicitar Orçamento
+                        </button>
+                        <a class="inline-flex items-center gap-4 group" href="#gallery">
+                            <span class="h-px w-12 bg-charcoal group-hover:w-20 transition-all duration-500"></span>
+                            <span class="uppercase tracking-widest text-xs font-bold">Explorar Coleção</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 relative">
+                    <div class="aspect-[3/4] overflow-hidden rounded-sm shadow-2xl">
+                        <img alt="Nando Mercês" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp_pp_GIWzpfcdLAB7yIJiwG5NlDNmORXpzZjqcGL56_RjthdL6hIR_L6K0MQyEohnapI4XtZmKOZoWJB6M3-uMjUBK15mIaAAu7zVhpCEFmVNOdhxW0JKXGEXyLYpmwRn2i5muo5YHoVUUzqSVrqP6WKFH-8SwK1c9O_yq5BIekTkigmmi9rNmsKwsYcTGBlvgzyMxaGXWQB4awIv3QFsK41GM4Z91sLOitjTIMclsQgodbjGfLR70Sfz_cPU8Y_mhpCg_JFhKmQ"/>
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-premium-white p-8 hidden md:block border border-charcoal/5 shadow-xl">
+                        <p class="font-serif italic text-2xl text-primary">Nando Mercês</p>
+                        <p class="text-[10px] uppercase tracking-widest mt-1 opacity-50 text-charcoal">Portrait by Studio São Paulo</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-32 md:py-48 bg-charcoal text-premium-white overflow-hidden" id="about">
+            <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+                    <div class="space-y-12">
+                        <h2 class="text-4xl md:text-6xl font-serif leading-tight">
+                            "Uma pintura é uma <span class="text-primary italic">conversa</span> que transcende o relógio."
+                        </h2>
+                        <div class="grid grid-cols-2 gap-8 border-t border-premium-white/10 pt-12">
+                            <div>
+                                <p class="text-3xl font-serif text-primary">20+</p>
+                                <p class="text-[10px] uppercase tracking-[0.2em] opacity-50 mt-2">Anos de Maestria</p>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-serif text-primary">São Paulo</p>
+                                <p class="text-[10px] uppercase tracking-[0.2em] opacity-50 mt-2">Ateliê Principal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-8 text-lg font-light leading-relaxed text-premium-white/70">
+                        <p>
+                            Nando Mercês é um realista contemporâneo brasileiro cujas obras residem em coleções privadas de conhecedores globais. Sua abordagem está enraizada nas tradições meticulosas dos Antigos Mestres, mas infundida com uma sensibilidade moderna que fala ao desejo de permanência da era digital.
+                        </p>
+                        <p>
+                            Cada peça é o resultado de meses de camadas, utilizando a luz como um meio físico para evocar emoção e memória. Seu estúdio serve como um santuário onde o tempo desacelera.
+                        </p>
+                        <button class="inline-block border-b border-primary pb-1 text-primary text-sm font-medium hover:text-premium-white hover:border-premium-white transition-all uppercase tracking-widest" onclick="openModal()">
+                            Solicitar Biografia Completa
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-32 md:py-48" id="gallery">
+            <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+                    <div class="space-y-4">
+                        <span class="text-primary font-semibold tracking-[0.3em] uppercase text-xs">Obras Curadas</span>
+                        <h2 class="text-5xl md:text-7xl font-serif font-bold">Séries Selecionadas</h2>
+                    </div>
+                    <p class="max-w-xs text-charcoal/50 text-sm leading-relaxed">
+                        Um vislumbre da coleção permanente. Cada obra é uma criação única em óleo sobre linho ou técnica mista.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+                    <div class="group cursor-pointer">
+                        <div class="aspect-[4/5] overflow-hidden bg-neutral-200 mb-6 transition-transform duration-700 ease-out group-hover:scale-[1.02]">
+                            <img alt="Shadows of Paulista" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyMrsGRwdv52xrj0Pggsi8vS2Evx9m7l5WdMaO1082UL1capW2uiyNi6raXjjLlYoja-tfiqJrO4YR0Xqbwpg8Wvw5uMBA2yVtD56DrYaESKlLnX-qJzUL9nEhozTwddrn8n62glWL4Cm8pnmURZH4oDzm9fZjo_Z67Ipb9KsVDFZ8x0IAYQS8b_LxfB304zPRoc0z7ISEDT4vrUHW8ItbxMImuxXvuIrEOsHr7-sFj8iY_3Ryz85pPvbyqHgNc-TYcFBdCeJ9BOA"/>
+                        </div>
+                        <div class="flex justify-between items-baseline border-b border-charcoal/10 pb-4">
+                            <h3 class="font-serif text-2xl">Shadows of Paulista</h3>
+                            <span class="text-[10px] uppercase tracking-widest opacity-40 italic">2023</span>
+                        </div>
+                        <p class="text-[10px] uppercase tracking-widest mt-4 opacity-60">Óleo sobre Linho • 120x150cm</p>
+                    </div>
+                    <div class="group cursor-pointer lg:mt-24">
+                        <div class="aspect-[4/5] overflow-hidden bg-neutral-200 mb-6 transition-transform duration-700 ease-out group-hover:scale-[1.02]">
+                            <img alt="The Morning Glaze" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYAo3ztwHsRIM3FHd7yq-8e5YMQu5T1klx-SX5tE7heSepwrsrAkKGyHImmQ6Ox8_cHSVlykKpbMUOVbdcEVuIefrTIejsx5FBbVEQuham9LtYBnmG7M7lKscTnOWLDrZClF80jkb0uufOdEVeBiNFxNszMYFXx07QLCq2xcDbVDG-2sNxA8_BALOfOmd35r76rI8z30F3aUQ8o5938t_kj5waNlWs0UuaTLU-3OKooDUsOL9ssqGnojuZPb8o19lh0hzmLEUbSok"/>
+                        </div>
+                        <div class="flex justify-between items-baseline border-b border-charcoal/10 pb-4">
+                            <h3 class="font-serif text-2xl">The Morning Glaze</h3>
+                            <span class="text-[10px] uppercase tracking-widest opacity-40 italic">2022</span>
+                        </div>
+                        <p class="text-[10px] uppercase tracking-widest mt-4 opacity-60">Óleo sobre Madeira • 80x100cm</p>
+                    </div>
+                    <div class="group cursor-pointer">
+                        <div class="aspect-[4/5] overflow-hidden bg-neutral-200 mb-6 transition-transform duration-700 ease-out group-hover:scale-[1.02]">
+                            <img alt="Eternal Still" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4jOOX_E0_cCxD5-yzIPpgtN5Yd2FJqof1kYe7tA997_dFTL5utzwEHA5vX7hEaE2DPy5i7sRem5tIeNQRh5Iy0TiCR9z1QYbo5W1SDNh8Cf3wN0AvjlC3AjHWRqlv7XZvqzQDiQJxTMYEg8etMGKaW5vbyvlklGn0vxhgVKk9s0xGyLRUBiQSGWAgzEMU_jNiV2K-YgS9AAm7SQB0Qcziq93tS3Ef_898EZZOui5beSp1rfW-34oeDieosRCCgOelia74nz3U3Z4"/>
+                        </div>
+                        <div class="flex justify-between items-baseline border-b border-charcoal/10 pb-4">
+                            <h3 class="font-serif text-2xl">Eternal Still</h3>
+                            <span class="text-[10px] uppercase tracking-widest opacity-40 italic">2024</span>
+                        </div>
+                        <p class="text-[10px] uppercase tracking-widest mt-4 opacity-60">Técnica Mista • 100x100cm</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-32 md:py-48 bg-white/40" id="cta-section">
+            <div class="max-w-[1440px] mx-auto px-6 md:px-12 text-center">
+                <div class="max-w-4xl mx-auto space-y-12">
+                    <span class="text-primary font-semibold tracking-[0.3em] uppercase text-xs">Exclusividade</span>
+                    <h2 class="text-5xl md:text-8xl font-serif leading-tight">Encomende uma peça de <span class="italic">legado</span>.</h2>
+                    <p class="text-xl text-charcoal/60 font-light leading-relaxed max-w-2xl mx-auto">
+                        Para verificar a disponibilidade de obras existentes ou discutir uma encomenda privada, entre em contato com o estúdio.
+                    </p>
+                    <div class="pt-8 flex flex-col items-center gap-10">
+                        <button class="bg-charcoal text-white px-12 py-6 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-primary transition-all duration-300 shadow-xl" onclick="openModal()">
+                            Solicitar Orçamento
+                        </button>
+                        <a class="text-2xl md:text-3xl border-b border-charcoal/20 pb-2 hover:border-primary transition-colors font-serif italic" href="mailto:studio@nandomerces.com">
+                            studio@nandomerces.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="py-16 border-t border-charcoal/5 bg-premium-white">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-12 pb-12">
+                <div class="signature-logo text-3xl font-bold">Nando Mercês</div>
+                <div class="flex gap-12 text-[10px] font-bold uppercase tracking-[0.2em]">
+                    <a class="hover:text-primary transition-colors" href="#">Instagram</a>
+                    <a class="hover:text-primary transition-colors" href="#">Artsy</a>
+                    <a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] uppercase tracking-widest opacity-40 pt-12 border-t border-charcoal/5">
+                <p>© 2024 Nando Mercês. Todos os direitos reservados.</p>
+                <p>São Paulo • Londres • Nova York</p>
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm">palette</span>
+                    <span>Fine Art Studio</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="fixed inset-0 z-[100] bg-premium-white/95 backdrop-blur-2xl items-center justify-center p-4 md:p-8 animate-in fade-in duration-500" id="commission-modal">
+        <div class="w-full max-w-5xl bg-premium-white border border-charcoal/5 shadow-2xl rounded-sm max-h-[90vh] overflow-y-auto relative">
+            <button class="absolute top-6 right-6 md:top-10 md:right-10 text-charcoal/40 hover:text-primary transition-colors z-10" onclick="closeModal()">
+                <span class="material-symbols-outlined text-4xl">close</span>
+            </button>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+                <div class="lg:col-span-4 bg-charcoal p-12 text-premium-white flex flex-col justify-between min-h-[400px]">
+                    <div class="space-y-8">
+                        <span class="text-primary font-semibold tracking-[0.3em] uppercase text-[10px]">Inquiry</span>
+                        <h2 class="text-4xl md:text-5xl font-serif leading-tight">Sua visão em <span class="italic text-primary">óleo</span>.</h2>
+                        <p class="text-premium-white/60 font-light leading-relaxed text-sm">
+                            Cada retrato é uma jornada compartilhada entre o artista e o colecionador. Por favor, preencha os detalhes abaixo para iniciarmos este diálogo.
+                        </p>
+                    </div>
+                    <div class="signature-logo text-3xl opacity-20 select-none pt-12">Nando Mercês</div>
+                </div>
+                <div class="lg:col-span-8 p-8 md:p-16">
+                    <form class="space-y-12">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                            <div class="space-y-2">
+                                <label class="form-label">Nome Completo</label>
+                                <input class="form-input" placeholder="Como deseja ser chamado" required type="text"/>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="form-label">E-mail de Contato</label>
+                                <input class="form-input" placeholder="exemplo@email.com" required type="email"/>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="form-label">Número de pessoas na pintura</label>
+                                <div class="relative">
+                                    <select class="form-input">
+                                        <option value="1">Apenas uma pessoa</option>
+                                        <option value="2">Duas pessoas</option>
+                                        <option value="3">Três pessoas ou mais</option>
+                                    </select>
+                                    <span class="material-symbols-outlined absolute right-0 bottom-3 text-charcoal/20 pointer-events-none">expand_more</span>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="form-label">Tipo de fundo</label>
+                                <div class="relative">
+                                    <select class="form-input">
+                                        <option value="desfocado">Desfocado (Estilo Bokeh)</option>
+                                        <option value="detalhado">Detalhado (Cenário completo)</option>
+                                        <option value="estudio">Fundo Neutro de Estúdio</option>
+                                    </select>
+                                    <span class="material-symbols-outlined absolute right-0 bottom-3 text-charcoal/20 pointer-events-none">expand_more</span>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="form-label">Inclusão de animais</label>
+                                <div class="relative">
+                                    <select class="form-input">
+                                        <option value="não">Não incluir animais</option>
+                                        <option value="sim">Sim, incluir animal de estimação</option>
+                                    </select>
+                                    <span class="material-symbols-outlined absolute right-0 bottom-3 text-charcoal/20 pointer-events-none">expand_more</span>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="form-label">Dimensões Sugeridas</label>
+                                <input class="form-input" placeholder="Ex: 100x120cm ou sob consulta" type="text"/>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="form-label">Mensagem ou História por trás da obra</label>
+                            <textarea class="form-input resize-none min-h-[100px]" placeholder="Conte-me sobre quem será retratado ou a essência que busca capturar..." rows="3"></textarea>
+                        </div>
+                        <div class="pt-6">
+                            <button class="w-full bg-charcoal text-premium-white hover:bg-primary py-5 text-[10px] font-bold uppercase tracking-[0.3em] transition-all duration-500 rounded-sm shadow-xl" type="submit">
+                                Enviar Solicitação de Orçamento
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openModal() {
+            const modal = document.getElementById('commission-modal');
+            modal.classList.add('active');
+            document.body.classList.add('modal-open');
+        }
+        function closeModal() {
+            const modal = document.getElementById('commission-modal');
+            modal.classList.remove('active');
+            document.body.classList.remove('modal-open');
+        }
+        window.onclick = function(event) {
+            const modal = document.getElementById('commission-modal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
