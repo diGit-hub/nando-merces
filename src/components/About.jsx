@@ -1,28 +1,28 @@
 export default function About() {
     return (
-        <section class="py-32 md:py-48 bg-charcoal text-premium-white overflow-hidden" id="about">
-            <div class="max-w-[1440px] mx-auto px-6 md:px-12">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
-                    <div class="space-y-12">
-                        <h2 class="text-4xl md:text-6xl font-serif leading-tight">
-                            "Uma pintura é uma <span class="text-primary italic">conversa</span> que transcende o relógio."
+        <section className="py-16 md:py-32 bg-charcoal text-premium-white overflow-hidden" id="about">
+            <div className="max-w-[1440px] mx-auto px-6 md:px-24">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+                    <div className="space-y-12">
+                        <h2 className="text-4xl md:text-5xl font-serif leading-tight">
+                            "Uma pintura é uma <span className="text-primary italic">conversa</span> que transcende o relógio."
                         </h2>
-                        <div class="grid grid-cols-2 gap-8 border-t border-premium-white/10 pt-12">
+                        <div className="grid grid-cols-2 gap-8 border-t border-premium-white/10 pt-12">
                             <div>
-                                <p class="text-3xl font-serif text-primary">20+</p>
-                                <p class="text-[10px] uppercase tracking-[0.2em] opacity-50 mt-2">
+                                <p className="text-3xl font-serif text-primary">20+</p>
+                                <p className="text-[10px] uppercase tracking-[0.2em] opacity-50 mt-2">
                                     Anos de Maestria
                                 </p>
                             </div>
                             <div>
-                                <p class="text-3xl font-serif text-primary">São Paulo</p>
-                                <p class="text-[10px] uppercase tracking-[0.2em] opacity-50 mt-2">
+                                <p className="text-3xl font-serif text-primary">São Paulo</p>
+                                <p className="text-[10px] uppercase tracking-[0.2em] opacity-50 mt-2">
                                     Ateliê Principal
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="space-y-8 text-lg font-light leading-relaxed text-premium-white/70">
+                    <div className="flex flex-col items-center justify-center space-y-8 text-lg font-light leading-relaxed text-premium-white/70">
                         <p>
                             Nando Mercês é um realista contemporâneo brasileiro cujas obras residem em coleções
                             privadas de conhecedores globais. Sua abordagem está enraizada nas tradições
