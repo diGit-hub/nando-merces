@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <footer className="py-16 border-t border-charcoal/5 bg-premium-white">
+        <footer className="py-32 border-t border-charcoal/5 bg-premium-white">
             <div className="max-w-[1440px] mx-auto px-6 md:px-24">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-12 pb-12">
                     <div className="signature-logo text-3xl font-bold">Nando Mercês</div>

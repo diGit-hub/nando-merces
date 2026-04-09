@@ -1,10 +1,10 @@
 export default function About() {
     return (
-        <section className="py-16 md:py-32 bg-charcoal text-premium-white overflow-hidden" id="about">
+        <section className="py-16 md:py-24 bg-charcoal text-premium-white overflow-hidden" id="about">
             <div className="max-w-[1440px] mx-auto px-6 md:px-24">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
                     <div className="space-y-12">
-                        <h2 className="text-4xl md:text-5xl font-serif leading-tight">
+                        <h2 className="text-3xl md:text-5xl font-serif leading-tight">
                             "Uma pintura é uma <span className="text-primary italic">conversa</span> que transcende o relógio."
                         </h2>
                         <div className="grid grid-cols-2 gap-8 border-t border-premium-white/10 pt-12">

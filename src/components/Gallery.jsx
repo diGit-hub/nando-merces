@@ -35,7 +35,7 @@ export default function Gallery() {
                         <span className="text-primary font-semibold tracking-[0.3em] uppercase text-xs">
                             Obras Curadas
                         </span>
-                        <h2 className="text-5xl md:text-6xl font-serif font-bold">Séries Selecionadas</h2>
+                        <h2 className="text-4xl md:text-5xl font-serif font-bold">Séries Selecionadas</h2>
                     </div>
                     <p className="max-w-xs text-charcoal/50 text-sm leading-relaxed">
                         Um vislumbre da coleção permanente. Cada obra é uma criação única em óleo sobre linho

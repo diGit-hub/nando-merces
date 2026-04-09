@@ -7,7 +7,7 @@ export default function Hero({ onOpenModal }) {
                         <span className="inline-block text-primary font-semibold tracking-[0.3em] uppercase text-xs">
                             Realismo Contemporâneo
                         </span>
-                        <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.9] font-serif tracking-tight">
+                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[0.9] font-serif tracking-tight">
                             A Arte da <br />
                             <span className="italic font-normal">Quietude.</span>
                         </h1>
@@ -32,7 +32,7 @@ export default function Hero({ onOpenModal }) {
                     <div className="aspect-[3/4] overflow-hidden rounded-sm shadow-2xl">
                         <img
                             alt="Nando Mercês pintando"
-                            className="w-full h-full object-cover"
+                            className="w-auto h-full object-cover"
                             src="/src/assets/pintando.jpg"
                         />
                     </div>

@@ -1,12 +1,12 @@
 export default function CTA({ onOpenModal }) {
     return (
-        <section className="py-32 md:py-48 bg-white/40" id="cta-section">
+        <section className="py-16 md:py-32 bg-white/40" id="cta-section">
             <div className="max-w-[1440px] mx-auto px-6 md:px-24 text-center">
                 <div className="max-w-4xl mx-auto space-y-12">
                     <span className="text-primary font-semibold tracking-[0.3em] uppercase text-xs">
                         Exclusividade
                     </span>
-                    <h2 className="text-5xl md:text-8xl font-serif leading-tight">
+                    <h2 className="text-5xl md:text-6xl font-serif leading-tight">
                         Encomende uma peça de <span className="italic">legado</span>.
                     </h2>
                     <p className="text-xl text-charcoal/60 font-light leading-relaxed max-w-2xl mx-auto">
