@@ -1,13 +1,13 @@
 export default function Hero({ onOpenModal }) {
     return (
         <section class="relative min-h-screen flex flex-col justify-center pt-20 overflow-hidden" id="hero">
-            <div class="max-w-[1440px] mx-auto px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="max-w-[1440px] mx-auto px-6 md:px-24 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-7 z-10 space-y-8">
                     <div class="space-y-4">
                         <span class="inline-block text-primary font-semibold tracking-[0.3em] uppercase text-xs">
                             Realismo Contemporâneo
                         </span>
-                        <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold leading-[0.9] font-serif tracking-tight">
+                        <h1 class="text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.9] font-serif tracking-tight">
                             A Arte da <br />
                             <span class="italic font-normal">Quietude.</span>
                         </h1>
